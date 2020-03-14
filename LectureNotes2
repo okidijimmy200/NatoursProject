@@ -190,3 +190,46 @@ POSITIONING SCHEMES: NORMAL FLOW, ABSOLUTE POSITIONING AND floats
 -if u have the elements stacked together, the one with the highrt z-index is stacked upper and the one with the lower is stacked below
 -opacity, transfor,filter can also create stacking elements
 -this is why sometimes even when z-index is placed on an element, it maynot work
+
+Lec10:
+CSS archtecture, Components & BEM
+-How shoud we think about layouts and how to markup our code
+-We want clean, modular, resuable code wch makes it easy to add more features to app if we need to grow it
+-THe best strategy is the THINK-BUILD-ARCHITECT mindset
+**THINK
+-We need to think about the layout of webapp before writing code 
+-Here we use Component driven design
+-We divide our page into modular Components
+-Components are the building bocks that we use to construct our interfaces
+_These should be resusable across the project and between diferent projects
+-They should be independent and not depend on the parent element
+
+**BUILD
+- build a consist structure for naming our classes
+-There are many approaches for naming our classes eg Object Oriented CSS or BEM
+---BEM(Block Element Modifier)
+this is a nice clear system for making up our layouts
+we have blocks whic is a standlone Components meeaningful on its own
+element is part of the block and has no meaning on its own
+-modifier is a flag that we can put on an element to make it different from other regular blocks or elements ie there cld be 
+rules for all buttons then we have a specific rule for a particular button
+
+**ARCHITECT
+-Create a logial archtecture fir our CSS files and folders
+-We will use the 7-1 pattern meaning e have 7 differnet folders and we put partial Sass files then we import one main Sass file
+which we import all our partia files into one final compiled CSS style sheet
+so the 7 folders we use are
+-base(basic produt definitions)
+-Components(one file for each Component)
+-layout(define the overall layout of the project)
+-pages(styles for specific pages of the project)
+-themes(to implement different visual themes)
+-abstract(code that doesnot output any CSS eg variables and mix-ins)
+-vendors(3rd party CSS)
+
+we dont always use all these folders and it depends on the size of the project
+
+Lec 11:
+Implementing BEM in the Natours project
+-conert html we are writing to BEM system
+
