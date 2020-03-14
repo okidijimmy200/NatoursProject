@@ -1,0 +1,192 @@
+How CSS works behind the scenes.
+Lecture 2: Three pillars of Writing Good html and CSS
+-Responsive Design
+-Writing Maintainable and scalable code
+-Web Performance
+
+Responsive Design
+-We will talk about media queries and fluid layouts
+-We will also talk about responsive images
+-Use of correct units like font sizes and dimensions.
+-Having a desktop-first or mobile first strategy.
+
+Writing Maintainable and scalable code
+-code should be clean, easy to understand
+-so we need to think about our CSS archtecture which is how we organize our files and name our classes
+
+Web Performance
+-how do we make a website faster and smaller in size
+-How to improve Performance like through making little HTTP requests
+-How to make the code small as possible.
+-How to reduce number of imaages that makes our code slower.
+
+lec 3: How CSS works behind the scenes an overview
+-When the user opens html code
+-loads the html
+-The html is then decorded line by line which then creates DOM(Document Object Model)
+-The entire decorded html code is stored in the DOM
+-As the browser parses the html, it also finds the css sheets
+-CSS is also parsed  but its abit more complex
+-there are two levels where CSS is parsed
+
+--1st: Conflicting declarations are resolved through the cascade process
+--2nd:  Process final css values like converting margins in percentages to pixels
+eg 50% margin on a smartphone is different from 50% on a large screen
+
+-The final CSS is stored in a CSS object Model similar to the DOM
+-So both the html in the DOM and the CSS in the CSSDOM are rendered together and we have everything we need to render the page.
+TO render the page, the browser uses Visual Formatting Model which contains alot of things like box model, floats nd positioning
+-FInally the website is rendered on the screens
+
+Lec 4: How CSS is parsed- The Cascade and specificity
+-CSS has a selector i.e class to style and the declaration block i.e color, font-size, text-align
+* Cascade process refers to combining differnet style sheets and resolving conflicts between different Css rules and declarations when more than one rule applies to a certain element
+CSS declarations can come from the developer and they are called AUTHOR declarations
+CSS declarations can also come from the user and its called USER DECLARATIONS i.e user changing font size
+CSS declarations could also be default
+
+How Cascade resolves conflicts when more than one rule applies.
+-It applies Selector specificity and to source order of conflicting declarations to determinw which one takes precedence.
+Most important declarations are User declarations, then author declarations then finally default declarations
+
+-We also check for specificity if the declarations have the same importance like
+* Inline styles
+* IDs
+* Classes and attribute selectors(hover operates as a class so its also counted in the order of specificity)
+*elements
+
+
+
+If there is a tie in CSS specificity, we use source order
+use important! as a last resort
+
+Lec 5: Specificity In Practice
+An element is like an avatar, a nav, div element
+If we put an !important next to a specificity of low value gives it high precedence
+-You should try your level best not to use !important
+
+Lec 6:How CSS is parsed part 2: Value processing
+-We shall look at the most used CSS units like percentages, ems, rems, vh 
+-Units like percentages, vh etc will all be converted to pixels
+ -Knowing these units will help you know which value to use
+ So we have 
+ *Declared values
+ *Cascaded values
+ *Specified values which is more of Inheritance
+ *Used values
+ -If we dont define a value, an initial value is going to be used
+ -Root font size(browser has a default value of 16px)
+ -1rem = 16px so a 1.5rem is 16 * 1.5px
+
+ HOW RELATIVE UNITS ARE CONVERTED TO pixels
+ -Vh and Vw are based on the browser view port
+
+
+Lec 7: How CSS is parsed,Part 3: Inheritance
+-This is a way of propagating property values from parent elements to their children.
+-Line height property gets inherited
+-An inherited value takes on the computed value of the property inherited
+-Properties related to text like font family, font size, color are inherited
+-The computed value of a property is what gets inherited and not the declared value
+-We can use Inheritance keyword to force an Inheritance
+
+Lec 8:
+Converting px to rem in our project 
+-convert all the absolute pixel units to relative rem units
+-We can use global font size that we can adjust automatically according to screen size
+-rem unit is related to our font size
+- Its stil bad practice to use pixel because it doesnot enable the use to make changes
+-So we use percantages
+Since the percantage is 100%
+so to convert the pixels given to percentage 100/16 = 62.5
+
+Lec 9:
+How CSS renders a website-The visual Formatting
+-CSS visual Formatting model is an algorithm that calculates and determines the layout of these boxes for each element in
+the render tree inorder to determine the final layout of the page.
+-The four factors of the box Visual Formatting
+**Dimensions of Boxes in the box model
+**Box Model
+-This defines how elements are displayed on a webpage like block, inline block.
+**Positioning scheme which helps with floats and absoulte, relative positioning
+** Stacking Context
+**Other elements present in thr render tree 
+**External information eg current and viewport size size, dimensions of images and other factors
+
+-When all these factors are brought together, the browser figures out how the website will look like for the user
+
+**Box Model
+-Each element on the box can be seen as a rectangle with a height, padding and margins and border and its optional
+-The box model contains 
+**Content
+-This is where we have image or text
+-We can define the height or width with corresponding CSS properties
+**padding
+-Transparent area around the content inside the box
+-Padding is used to generate white space within a box
+**Border
+-This goes around the padding and content
+**margin
+-Space between boxes. If we want space between two properties, we use margin
+
+**FIll area
+-This includes the whole area around the padding and content but not the margin.
+For example  the background image is applied through out the entire fill area and border but not the margin.
+
+Heigh and Width in Box Model.
+-Total width ---right border + right padding + specified width + left padding + left border
+-Total height ---top border + top padding + specified height + bottom padding + bottom border
+eg height = 0 + 20px + 100px + 20px + 0 = 140px is the final height displayed on the website
+
+-This though doesnot look very practical bse when we define width and height, the padding and border get added to the final result.
+-So we use the box sizing problem to fix this issue with property of border box.
+in this case our height will be 100px minus paddding and margins.
+
+**--BOX TYPES: INLINE, BLOCK-LEVEL AND INLINE-BLOCK
+-These determine how boxes are laid out on a page
+**BLOCK-LEVEL.
+-Type of box is defined by display property which is block in this case.
+-Elements formatted visually as blocks
+-All html elements have a default property ie paragraphs, divs
+-With block level box, these elements will occupy as much space as possible which is 100% of paret width.
+_they create linebreaks ,meaning the block are formatted vertically one after another.
+ 
+**--INLINE Boxes
+-Opposite of block level boxes
+-There content is distributed on lines meaning the box occupies the space its content only needs
+-These donot cause line breaks bt sit inside their block level parent element
+-Here the height and width property donot apply
+-We can only specify horizontal paddding and margin in inline elements
+-This has alot of limitations and we use inline boxes to overcome these
+
+**--INLINE Boxes
+-These are inline boxes that work as block level boxes
+these use up only their space and cause no line breaks bt work as block level elements
+-we need to set display property to inline bock
+
+POSITIONING SCHEMES: NORMAL FLOW, ABSOLUTE POSITIONING AND floats
+**NORMAL FLOW
+-this is what happens to an element at default
+-no floats
+-no absoute positioning
+-elements are laid out according to their source
+-if we use relative position, then the element is still in normalflow
+
+**floats
+-elements are laid on the page in their natural order in the code.
+-float property causes elements to be completely taken out of the norma flow and shifted to the left or right
+-the container will not adjust the height according wch can be problematic
+-we can use clear fixes to solve these problems.
+
+**ABSOLUTE FLOATS
+-if u set the position to fixed or absolute, the element is taken out of the normal flow
+-here the element has no impact on surronding elements and it can even overlap them so we use positioning top,left, right,bottom to place it in its situation
+-absoute elements overlap other elements.
+-this can be solved using stacking context 
+
+*stacking context
+-this is what determines in what order elements are rendered on the page
+-here we mainly use z-index
+-if u have the elements stacked together, the one with the highrt z-index is stacked upper and the one with the lower is stacked below
+-opacity, transfor,filter can also create stacking elements
+-this is why sometimes even when z-index is placed on an element, it maynot work

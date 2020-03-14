@@ -1,0 +1,31 @@
+body {
+    padding: 50px;
+}
+
+.button {
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+}
+
+/* a tag and button have the least specificity because they are elements*/
+/* !important gives a lower selector a high specifiity */
+ a {
+     background-color: purple;
+ }
+/* order ofspecificity */
+/* 0(inline style, 1(ID), 2(Classes), 2(element) */
+ #nav div.pull-right a.button{
+     background-color: orangered;
+     /* this declaration is what applies */
+ }
+/* 0(inline style, 1(ID), 2(Classes), 1(element) */
+/* So the upper one has higher specificity than the lower one */
+/* We will need to have a selector with higher specificity for hovering to work */
+ #nav a.button:hover {
+     background-color: yellow;
+     /* this is supposed to turn yellow when we hover over the tag */
+     /* but this doesnot hover. This is bse pseudo classes are also specificity*/
+ }
+
+ /* we have four selectors here like button class selector, anchor element selector and the hover pseudo class selector  */

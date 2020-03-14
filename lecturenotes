@@ -1,0 +1,78 @@
+Lecture on Headers:
+-we are going to learn to perform a basic reset using universal selector
+-How to set project with font definitions
+-How to clip parts of elements using clip-path
+
+on the CSS gradient
+  -you can specify the gradient to the right, left, bottom or to right bottom, left top 
+
+on the background-position:
+ - we can specify the position to top, bottom, center wch sticks to tht postion no matter the size of screen
+
+ clip-path:
+    -creating a curve or edge for image
+    -we use polygon function with x and y co-ordinates
+    -we can use vh(viewheight) to set image height according to screen size
+
+    check out the css clip-path maker(copy the css cordiantes)
+
+
+Lecture on Headers 2
+    -we r going to add logo
+    -we are going to add the header section
+    -we used transform attribute to position header text at the center of page
+    -we used one header and split it into blocks and each given a class to style it
+according to letter spacing, font-weight, size
+    -placed the heading in div block to contain the buttons too.
+
+
+Lecture on Creating Cool CSS Animations
+    -creating css animations @keyframes and the animation property
+    there are two types of transitions
+        -transition property then change property to animate
+        -we use @keyframes
+    there two ways to animate things on browser either using opacity and transformation
+with the transform property (-) meanings moving to left, (+) means moving to right
+-translate 0 makes it look the way it does ryt now
+-for animation to work, we need to specify the animation name and animation duration
+
+other animation properties
+    -aniation-delay: before the animation plays, it will take a given time
+    -animation-iteration-count: animation count happens three times before it settles down
+    -animation-timing-function: how the parameters we specified will happen over time eg ease-out, ease-out, ease, checkout mozilla css doc
+- we can also perform rotations i.e transform: rotate(120deg)
+
+-We can also make animations on hover i.e 
+.logo: hover {
+    animation: moveInRight;
+}
+which animates the logo when its hovered
+
+Lecture building complex animated button
+-We are going to learn pseudo elements classes and why they are important
+-How and why to use the ::after pseudo-element
+-How to build a creative hover animation effect using the transition property
+
+So how to we try to make the button appear bigger momentarily when hovered over.
+
+.btn:link,
+.btn:visited -- with these links, we want the button after it has been clicked to look the same as before being clicked.
+
+e.g google link before clicked is blue but when clicked its purple which is a default for browsers.
+We want ours to remain the same before and after click
+
+-When we finish styling the button, the padding doesnot immediately work because its in a div.
+So we need to get it in a inline-block.
+Always use inline-block when you want to place padding to elements.
+
+-How do we place the button in the middle of the div?
+inline element is treated as though it was text.
+so we set the text-box property align to center
+
+Lecture 7:
+Building a complex Animated Button 2
+-creating the outward zooming effect when we hover over button.
+-::after pseudo element looks like the button itself but we put it behind the button and when we hover over btn, pseudo element
+goes behind the button.
+-z-index:-1 means its behind the main element
+

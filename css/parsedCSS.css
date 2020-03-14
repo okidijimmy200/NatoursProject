@@ -1,0 +1,57 @@
+.section {
+    font-size: 1.5rem;
+    width:280px;
+    background-color: orangered;
+}
+
+p {
+    width: 140px;
+    background-color: green;
+}
+/* How CSS values are processed */
+/* there are two width values with p element and class amazing which are conflicting */
+/* so the class selector will be used because its of high specificity than element */
+.amazing {
+    width: 66%;
+}
+
+/* 
+ HOW RELATIVE UNITS ARE CONVERTED TO PIXELS */
+
+ html, body {
+     font-size: 16px;
+     width: 80vh;
+ }
+
+ header {
+     font-size: 150%;
+     /* this will have a font size 150 times larger than parent element which is the default of 16px */
+     padding: 2em;
+     margin-bottom: 10rem;
+     height: 90vh;
+     /* height, margin, padding in percentage id different from sizes in percentages */
+     /* the reference is always the parent elements width */
+     /* parent width is 1000px so 10% is 100px */
+     width: 100px;
+ }
+
+ .header-child {
+     font-size: 3em;
+     /* em and rem units are font based units*/
+     /* ems use the parent or current element as a reference */
+     /* rems use root font size as the reference */
+     /* ems work the same for both font sizes and length */
+     padding: 10%;
+ }
+
+ /* explanation for inheritance */
+ .parent {
+     font-size: 20px;
+     line-height: 150%;
+     /* line-height propery gets inherited */
+     /* padding, margin is not an inherited property */
+ }
+
+ .child {
+     font-size: 25px;
+ }
