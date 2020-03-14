@@ -14,21 +14,25 @@
     </head>
     <body>
         <!-- html for header element/ we are focussing on making the shape of image -->
+        <!-- the header is a block in the BEM system bse its a standalone so all the elements inside it should also have it -->
         <header class="header">
             <!-- creating the logo section -->
-            <div class="logo-box">
+            <!-- adding BEM structure and it should be with double underscores -->
+            <div class="header__logo-box">
                 <!-- alt image is to help search optimization on browser -->
-                <img src="images/logo_dark.png" alt="Logo"  class="logo"/>
+                <img src="images/logo_dark.png" alt="Logo"  class="header__logo"/>
             </div>
             <!-- creating the primary heading -->
-            <div class="text-box">
+            <div class="header__text-box">
+                <!-- this is a standalone block too bse we can use it as  reference -->
                     <h1 class="heading-primary">
-                            <span class="heading-primary-main">VelonicSecurity</span>
-                            <span class="heading-primary-sub">protecting your systems</span>
+                        <!-- here heading-primary-main and sub are modifiers of heading primary -->
+                            <span class="heading-primary--main">VelonicSecurity</span>
+                            <span class="heading-primary--sub">protecting your systems</span>
                     </h1>
 
                     <!-- adding a button which is an ancher element -->
-                    <a href="#" class="btn btn-white btn-animated">Learn More</a>
+                    <a href="#" class="btn btn--white btn--animated">Learn More</a>
             </div>
             
         </header>

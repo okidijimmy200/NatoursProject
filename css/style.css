@@ -51,7 +51,7 @@ html {
 }
 
 /* styling the logo */
-.logo-box {
+.header__logo-box {
     /* use absolute positioning */
     position: absolute;
     top:4rem;
@@ -59,13 +59,13 @@ html {
     /* we need to have a refrence to count 40px top and left from. we get it from header, so the header part is placed to position relative to logo-box */
 }
 
-.logo {
+.header__logo {
     height:3.5rem;
 }
 
 /* styling the heading primary */
 
-.text-box {
+.header__text-box {
     /* centering the box in the middle */
     position: absolute;
     top: 40%;
@@ -85,7 +85,7 @@ html {
     margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     /* display them as block elements to separate the two span elements */
     display: block;
     font-size: 6rem;
@@ -100,7 +100,7 @@ html {
 
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -209,7 +209,7 @@ html {
 
 
 /* styling color to white */
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -234,7 +234,7 @@ html {
 
 }
 /* ::after pseduo-element with button white */
-.btn-white::after {
+.btn--white::after {
     background-color:#fff;
 }
 
@@ -246,7 +246,7 @@ html {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out;
     /* animation fill mode. it applies the style of 0% before animation starts */
     animation-fill-mode: backwards;

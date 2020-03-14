@@ -232,4 +232,6 @@ we dont always use all these folders and it depends on the size of the project
 Lec 11:
 Implementing BEM in the Natours project
 -conert html we are writing to BEM system
+--So a block we use heading--main as our class
+--If its a block, we use heading__main as our class
 
