@@ -1,0 +1,41 @@
+Lecture 1:
+Introduction to SASS.
+What is SASS
+-this is a CSS preprocessor, an extension of css and adds alot of power and elegance to the base
+of the language.
+-SASS is used to fix the problems we have with CSS
+-For huge projects, CSS gets messy quicky with mutiple lines of code without reusable pieces and no logic
+-So here we run files with SASS code and a compier converts the SASS code in CSS code.
+-We need to process the CSS with a preprocessor
+
+Features SASS gives us.
+-SASS gives us variabes which enabes us have reusabe components like fonts, color
+-Nesting: nesting selectors inside one another which helps us write less code.
+-Operators for mathematical operations right inside of CSS
+-Partials and imports to write CSS in differnet files and importing them all into one single file
+-Mixins to write reusabe pieces of CSS code
+-Functions similar to mixins, with the differnence that they produce a value that can be used later
+-Extends: to make different selectors inherit decarations that are common to all of them
+-Control directives: for writing complex code using conditionals and loops
+
+Differnece between SASS and SCSS
+-SASS language
+(indentation sensitive and doesnot use braces and semicolons
+-this is abit more confusing and difficult to learn)
+-SCSS --Sassy CSS
+-this preserves the way origina CSS looks like
+-we will use SCSS
+
+Lecture 3:
+FIRST STEPS WITH SASS: VARIABLES AND NESTING
+-
+
+Lec 4:
+First steps with SASS mixins, extends and functions
+-A mixin is a reuseable piece of code
+-if we wish to use clear fix on multiple pages
+-imagine if we wished to use the clearfix on multiple places throughout the page.
+-It would not be necessary to add the code in the nav area
+-We can instead make a mixin and include the mixin in the place
+
+

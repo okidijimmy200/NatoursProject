@@ -148,7 +148,7 @@ in this case our height will be 100px minus paddding and margins.
 -Type of box is defined by display property which is block in this case.
 -Elements formatted visually as blocks
 -All html elements have a default property ie paragraphs, divs
--With block level box, these elements will occupy as much space as possible which is 100% of paret width.
+-With block level box, these elements will occupy as much space as possible which is 100% of parent width.
 _they create linebreaks ,meaning the block are formatted vertically one after another.
  
 **--INLINE Boxes
@@ -159,10 +159,10 @@ _they create linebreaks ,meaning the block are formatted vertically one after an
 -We can only specify horizontal paddding and margin in inline elements
 -This has alot of limitations and we use inline boxes to overcome these
 
-**--INLINE Boxes
+**--INLINE Block
 -These are inline boxes that work as block level boxes
 these use up only their space and cause no line breaks bt work as block level elements
--we need to set display property to inline bock
+-we need to set display property to inline block
 
 POSITIONING SCHEMES: NORMAL FLOW, ABSOLUTE POSITIONING AND floats
 **NORMAL FLOW
