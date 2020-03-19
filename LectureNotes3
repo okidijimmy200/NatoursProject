@@ -37,5 +37,35 @@ First steps with SASS mixins, extends and functions
 -imagine if we wished to use the clearfix on multiple places throughout the page.
 -It would not be necessary to add the code in the nav area
 -We can instead make a mixin and include the mixin in the place
+-With mixin, we can place similar lines of code that appear multiple times in one place
+this is called the DRY principle(Dont Repeat Yourself)
+-We can pass mixins as an argument i.e if the @mixins has a default color of white but we want to pass gray
 
+Functions
+-The darken and lighten property are functions
+-If we want a function that divides the argument we passed in the function
 
+Extends
+-We write things that are common in placeholder in buttons
+-Extends are not commonly used, prefer mixins
+
+Lecture 5:
+Introduction to Command Line
+-How to compile and install SASS locally
+
+Lecture 6:
+NPM packages, Installig SASS locally 
+-npm init
+-install SASS compiler
+-npm install node-sass --save-dev
+-We need to write our own script in package.json to compile the file
+-to run the sass file
+---npm run compile:sass
+
+-to enable automatic reload of pages, we call it watch flag, we include the w which means watch
+-you canot close the watch terminal
+
+Lecture 7:
+Automatic reloading of a page
+-Install liveserver
+npm install live-server -g
