@@ -1,0 +1,44 @@
+// header section
+
+/* formatting the header element */
+.header {    
+    height: 95vh; /* vh meaning viewport Height so 95 of default view height of the screen */   
+    background-image:linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.808)), 
+        url(../images/desktop.jpg);   
+    background-size: cover;  /* background cover takes over the width of view port */   
+    background-position: top; /* we can specify the position to top, bottom, center wch sticks to tht postion no matter the size of screen*/
+    /* using clip-path to cut part of image */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh,  0 100%);
+    /* parent position which is relative */
+    position: relative;
+
+    // nesting the elements
+    /* styling the logo */
+    &__logo-box {
+        /* use absolute positioning */
+        position: absolute;
+        top:4rem;
+        left:4rem;
+        /* we need to have a refrence to count 40px top and left from. we get it from header, so the header part is placed to position relative to logo-box */
+    }
+
+    &__logo {
+        height:3.5rem;
+    }
+    
+    /* styling the heading primary */
+    
+    &__text-box {
+        /* centering the box in the middle */
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        /* we use the transform property of css to place the text at the center of browser*/
+        transform: translate(-50%, -50%);
+        /* aligning the btn to center  */
+        text-align: center;
+    }
+}

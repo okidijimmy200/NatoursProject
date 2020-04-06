@@ -3,3 +3,31 @@ LECTURE 1:
 Converting CSS to SCSS code
 -We will be converting our code to SCSS
 -Then we use the BM to nest our selectors
+
+Lecture 2:
+Implementing the 7-1 CSS archtiecture with SASS
+-Here we create 7 main folders and one SCSS file to import all files in these folders
+-Create the base folder inside Sass  folder and we have a sass folder init called base.scss whih 
+has resets and styles for body.
+-We shd be able to import this file to the main SCSS file
+-Partial files always start with an underscore
+-We also include animation files and typography
+-Utilities
+-This archtiecture is intended to handle large websites 
+
+
+-We have a folder called abstract thats contains variables, mixins
+-We will create our components folder
+-Components are held together by the layout of the page
+-We need a layout folder for each piece of the entire project so we will have a global footer,
+header
+-we create page folder for styling individual pages
+
+-We also have themes folder and vendors folder ie animation framework, icon system or bootstrap
+-For now we will leave these empty
+
+-btn is a component bse its reusable across the page
+-We create a button.scss in the components folder
+
+-We shall treat the header as a layout component bse we may need a header on multiple pages
+-Header is better organised as a typography than a layout
