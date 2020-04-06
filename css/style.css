@@ -43,29 +43,26 @@ html {
   /* using clip-path to cut part of image */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* parent position which is relative */
-  position: relative; }
-
-/* styling the logo */
-.header__logo-box {
-  /* use absolute positioning */
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-  /* we need to have a refrence to count 40px top and left from. we get it from header, so the header part is placed to position relative to logo-box */ }
-
-.header__logo {
-  height: 3.5rem; }
-
-/* styling the heading primary */
-.header__text-box {
-  /* centering the box in the middle */
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  /* we use the transform property of css to place the text at the center of browser*/
-  transform: translate(-50%, -50%);
-  /* aligning the btn to center  */
-  text-align: center; }
+  position: relative;
+  /* styling the logo */
+  /* styling the heading primary */ }
+  .header__logo-box {
+    /* use absolute positioning */
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    /* we need to have a refrence to count 40px top and left from. we get it from header, so the header part is placed to position relative to logo-box */ }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    /* centering the box in the middle */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* we use the transform property of css to place the text at the center of browser*/
+    transform: translate(-50%, -50%);
+    /* aligning the btn to center  */
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -74,26 +71,24 @@ html {
   backface-visibility: hidden;
   /* to increase bottom margin to button */
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  /* display them as block elements to separate the two span elements */
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 1.5rem;
-  /* specify the name of animation in the text to be moved */
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  /* animation-delay: 3s; */
-  /* animation-iteration-count: 3; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 2.1rem;
-  animation: moveInRight 1s ease-out; }
+  .heading-primary--main {
+    /* display them as block elements to separate the two span elements */
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    /* specify the name of animation in the text to be moved */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2.1rem;
+    animation: moveInRight 1s ease-out; }
 
 /* creating css animations using @keyframe rule */
 @keyframes moveInLeft {
@@ -147,70 +142,63 @@ html {
 /* to style a button link, you need to include the btn:link specification */
 /* the link is the pseudo-class wch is a special state of selector*/
 /* btn:visited the state a user has clicked the button b4 and then see the button again */
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-decoration: none;
-  /*padding around button  */
-  padding: 1.5rem 4rem;
-  /* displaying btn as an inlink block to execute padding */
-  display: inline-block;
-  border-radius: 8rem;
-  /* all properties are enabled to be translated to .2 seconds */
-  transition: all .2s;
-  /* position relative to ::after */
-  position: relative; }
-
-/* work on the hover state */
-/* when we hover, we want the element to move up */
-.btn:hover {
-  transform: translateY(-0.3rem);
-  /* adding box-show on hover. since we dont want offset in x-direction */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-/* when we click a btn, thats the active state */
-/* so when we click the btn, it moves down slightly */
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-/* styling color to white */
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-/* pseudo-elements allow us to style some parts of elements */
-/* e.g after pseudo adds a vitual element to the element which enables us to style it*/
-.btn::after {
-  /* always specify content property */
-  content: "";
-  display: inline-block;
-  /* inline-block since the button is also inline-block*/
-  height: 100%;
-  width: 100%;
-  border-radius: 8rem;
-  /* place the ::after behind the button */
-  position: absolute;
-  /* position is absolute so its relative to the actual button, we need to include it in the btn*/
-  top: 0;
-  left: 0;
-  /* place the z-index(defines position of element if they are one on top of another)*/
-  z-index: -1;
-  transition: all .4s; }
-
-/* ::after pseduo-element with button white */
-.btn--white::after {
-  background-color: #fff; }
-
-/* after pseudo element when button is hovered */
-.btn:hover::after {
-  /* transform scale increases the element */
-  transform: scaleX(1.4) scaleY(1.6);
-  /* to make the element fade out */
-  opacity: 0; }
-
-.btn--animated {
-  animation: moveInBottom .5s ease-out;
-  /* animation fill mode. it applies the style of 0% before animation starts */
-  animation-fill-mode: backwards; }
+.btn {
+  /* work on the hover state */
+  /* when we hover, we want the element to move up */
+  /* when we click a btn, thats the active state */
+  /* so when we click the btn, it moves down slightly */
+  /* styling color to white */
+  /* pseudo-elements allow us to style some parts of elements */
+  /* e.g after pseudo adds a vitual element to the element which enables us to style it*/
+  /* ::after pseduo-element with button white */
+  /* after pseudo element when button is hovered */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-decoration: none;
+    /*padding around button  */
+    padding: 1.5rem 4rem;
+    /* displaying btn as an inlink block to execute padding */
+    display: inline-block;
+    border-radius: 8rem;
+    /* all properties are enabled to be translated to .2 seconds */
+    transition: all .2s;
+    /* position relative to ::after */
+    position: relative; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    /* adding box-show on hover. since we dont want offset in x-direction */
+    box-shadow: 0 1rem 2rem rgba(119, 119, 119, 0.2); }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(119, 119, 119, 0.2); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+  .btn::after {
+    /* always specify content property */
+    content: "";
+    display: inline-block;
+    /* inline-block since the button is also inline-block*/
+    height: 100%;
+    width: 100%;
+    border-radius: 8rem;
+    /* place the ::after behind the button */
+    position: absolute;
+    /* position is absolute so its relative to the actual button, we need to include it in the btn*/
+    top: 0;
+    left: 0;
+    /* place the z-index(defines position of element if they are one on top of another)*/
+    z-index: -1;
+    transition: all .4s; }
+  .btn--white::after {
+    background-color: #fff; }
+  .btn:hover::after {
+    /* transform scale increases the element */
+    transform: scaleX(1.4) scaleY(1.6);
+    /* to make the element fade out */
+    opacity: 0; }
+  .btn--animated {
+    animation: moveInBottom .5s ease-out;
+    /* animation fill mode. it applies the style of 0% before animation starts */
+    animation-fill-mode: backwards; }
