@@ -6,7 +6,7 @@ Converting CSS to SCSS code
 
 Lecture 2:
 Implementing the 7-1 CSS archtiecture with SASS
--Here we create 7 main folders and one SCSS file to import all files in these folders
+-Here we create 7 main folders and one main SCSS file to import all files in these folders
 -Create the base folder inside Sass  folder and we have a sass folder init called base.scss whih 
 has resets and styles for body.
 -We shd be able to import this file to the main SCSS file
@@ -31,3 +31,68 @@ header
 
 -We shall treat the header as a layout component bse we may need a header on multiple pages
 -Header is better organised as a typography than a layout
+
+Lecture 3:
+Review of Basic principes of Responsive Design and Layout types
+
+--1St:
+Use of Fluid Grids and Layouts
+-So here we use percentages rather than pixels for all layout related length esp width
+this is done to enable the content easily adapt to the current view port
+
+--2nd
+Flexible and Responsive Images
+-Images behave a bit different from text bse they donot scale automatically as we change the view port
+-So we need to make images adapt nicely to current view port
+-We make images flexible by defining their dimensions in percentages
+
+--3rd
+Media Queries
+-These enable us to change styles on certain view port width called break points
+-This allows developers create different versions of a website for different devices
+
+there are three main ways of laying out a webpage
+-float layouts like float left
+-Flex box enables you layout multiple elements in a single dimension
+-CSS grids is perfect for creating the overall layout of page in fully-fledged 2D grid
+
+Lecture 4
+Building a custom Grid with floats
+-How to architect and build a simple grid system
+-We will learn how the attribute selector works, how the powerful not pseudo-class works
+-How calc() function works
+-whats the differnece btn simple sass mathematical operations
+
+-A Grid is a design which allows us to build consistent interfaces
+-All columns should be in a container called row
+- 10px = 1rem
+-max width implies that if we have enough available space, then it has the width we specified bt if the viewport is smaller
+than 114rem then it fills 100% of available space
+-The margin-bottom and max-width can be placed in variable
+
+Not pseudo Selector
+--Here we select everything except the last column 
+
+-Since we have column inside of row, we can nest it in the selectors
+The total width of column is 100%
+to get half the width plus gutter space
+-We use the cal function to perform this operation.
+-This allows us to make calculations where we can add units
+
+-When performing gutter, it should be on all the righ margiins except the last one
+-A clear fix is a mixin that we use in our files
+-We will use atrribute selector 
+-we will select basing on class wch selects all the elements in which the class attribute starts
+
+Lecture 5:
+Building the About Section
+-We will learn how to think abt components
+-how and why to use utility classes
+-how to use the background-clip property
+-How to transform multiple property simultaneously
+-how to use the outline-offset property together with outline
+-how to style elements that are not hovered
+
+**We are going to talk about the think, build architect mindest
+-We have heading, paragraphs which is part of typography
+-We have button which is
