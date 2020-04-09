@@ -96,3 +96,22 @@ Building the About Section
 **We are going to talk about the think, build architect mindest
 -We have heading, paragraphs which is part of typography
 -We have button which is
+
+install emmet
+-We use 25rem in padding to cover up the triangular space created by the clip path in section for header
+-We give it a negative margin to move up
+
+-How to place a gradient on our h2
+-How do we make sure the element doesnot occupy 100% of space
+-This happens bse its a block element as we do tht
+-So we change it to inline block
+
+-We then use the webkit clip-path tool
+-This helps us clip the background exactly where the text is
+-We make the text transparrent so tht we see only the image
+
+-to perform animation effects
+
+-to place the text in the center, we wrapthe text in a parent element then center it from there
+-we shall use utility classes to center the text
+-we need to have a utility margin for our project

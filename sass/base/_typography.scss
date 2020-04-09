@@ -31,3 +31,25 @@
     }
 }
 
+// h2 for the about section
+.heading-secondary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    // making the h2 text green
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    // we set the color to transparent
+    color:transparent;
+    letter-spacing: .2rem;
+    transition:all .2s;
+
+    // performing hover effect
+    &:hover {
+        // we perform transform to perform multiple things. we can skew in the x-direction and y-direction
+        transform: skewY(2deg) skewX(2deg) scale(1.1);
+        // text decoration beneath in the x and y direction
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+;    }
+}
