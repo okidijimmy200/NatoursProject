@@ -53,3 +53,16 @@
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
 ;    }
 }
+.heading-tetiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size:1.6rem;
+    // to remove space in the last part of the paragraph
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

@@ -12,7 +12,7 @@
     &:link,
 &:visited {
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     text-decoration: none;   
     /*padding around button  */
     padding: 1.5rem 4rem;
@@ -84,4 +84,36 @@
     /* animation fill mode. it applies the style of 0% before animation starts */
     animation-fill-mode: backwards;
 }
+}
+// button in the main section
+.btn-text {
+    // we will have styles for the links, visited and hover and active pseudo-classes
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color:$color-primary;
+        // display inline block to apply box properties like padding, margin
+        display: inline-block;
+        text-decoration: none;
+        // to place our own underlining
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        // since we want the whole feature to be animated
+        transition: all .2s;
+        
+    }
+    // when we hover over the button
+    &:hover {
+        background-color: $color-primary;
+        color: white;
+        // 0 in x-direction, 10px in y-direction, 2rem for bluur then color
+        box-shadow: 0 1rem 2rem rgba($color-black,0.2);
+        // translate the button in the y-direction
+        transform: translateY(-.2rem);
+    }
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black,0.2);
+        // translate the button in the y-direction
+        transform: translateY(0);
+    }
 }

@@ -85,7 +85,7 @@ to get half the width plus gutter space
 -we will select basing on class wch selects all the elements in which the class attribute starts
 
 Lecture 5:
-Building the About Section
+Building the About Section 1
 -We will learn how to think abt components
 -how and why to use utility classes
 -how to use the background-clip property
@@ -115,3 +115,17 @@ install emmet
 -to place the text in the center, we wrapthe text in a parent element then center it from there
 -we shall use utility classes to center the text
 -we need to have a utility margin for our project
+
+Lecture 6:
+Building the About Section 2
+-on the text content, we will have h3 headings and paragrapghs
+-try to make the lorem text not the same
+-heading-tetiary is going to our typography
+
+-How to set margin btn heading h3 and paragraph
+-so we add the utility class
+-we are going to place a button
+-We can use the html code instead of font icons, we can get them at
+
+*******************codingheros.io/resources************
+-to style the button, we move to the button component
