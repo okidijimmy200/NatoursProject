@@ -1,0 +1,53 @@
+.composition {
+    // parent position is relative
+    position: relative;
+    &__photo{
+        // set a width and box-shadow:
+        width: 80%;
+        // box-shadow in the x-direction, y-direction and the blurr
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: .2rem;
+        position: absolute;  
+        z-index: 10;   
+        // to enable animation effects
+        transition: all .2s;   
+        // to give us space btn border
+        outline-offset: 2rem;
+
+        &--p1 {
+            // moving 0px from the left of the col
+            left: 0;
+            // 20px from the top of col upwards
+            top: -2rem;
+        }
+
+        &--p2 {
+            // moving 0px from the right of the col
+            right: -6%;
+            // 20px from the top of col
+            top: 3rem;
+        }
+
+        &--p3 {
+            // 20% from the left
+            left: 5%;
+            top: 10rem;
+        }
+        // to implement hover effect
+        &:hover {
+            // to perform the zooming of scale
+            transform: scale(1.05) translateY(-.5rem);
+            // the box-size increases the cast shadow 
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            // to enable overlapping effect
+            z-index: 20;
+            // to implement the outline border
+            outline: 1.5rem solid $color-primary;          
+
+        }
+        // to make the image smaller when we zoom on an image
+        &:hover &__photo:not(:hover) {
+            transform: scale(.9);
+        }
+    }
+}

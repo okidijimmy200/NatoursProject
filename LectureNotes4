@@ -129,3 +129,29 @@ Building the About Section 2
 
 *******************codingheros.io/resources************
 -to style the button, we move to the button component
+
+Lecture 7:
+Building the About Section 3
+-The images we are going to place are in different positions so we need a modifier
+-The BEM structure
+-we create a composition.scss file in components
+
+-we use absolute positioning to place the pictures on top of the other
+-the absolute positioning needs to be placed relative to the parent component which is 
+composition in this case
+
+-so we place the images in the different places one by one
+-to implement the hover effect to zoom in and out of the image
+
+**we always have to define the width of images in % to help in responsive design
+
+-to make elements overlap over the other, we use z-index
+-we set z-index on parent element jst like position relative
+-then the next z-index will be higher
+
+-we then implement the border property on the images
+we use outline instead of border to enable us perform extra functionalities
+-we can perform the outline offset with outline property
+
+-to make the other images decrease in size when we zoom on one image
+
