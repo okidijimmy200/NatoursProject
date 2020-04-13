@@ -1,0 +1,133 @@
+.card {  
+
+     // we use perspective to remove rough edges when turning
+    // perspective is placed on the parent element, it hs to be large
+    perspective: 150rem;
+    // to work in mozilla
+    -moz-perspective: 150rem;
+    // parent position is relative
+    position: relative;
+    // height of card
+    height: 47rem;
+
+    &__side {        
+        height: 47rem;       
+        transition: all 1s ease;
+        // to place card on-top of the other
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        // hide the back part of an element
+        backface-visibility: hidden;
+        border-radius: .3rem;
+        // to replace the border property after implementing the belnd
+        // bse the image is overflowing the parent in the corner
+        overflow: hidden;
+        box-shadow: 0 1.5rem, 4rem, rgba($color-black, .15);
+
+        // front side of card
+        &--front {
+            background-color: $color-white;
+        }
+        // baack side of card
+        &--back {            
+            transform: rotateY(180deg);
+            // for particular card
+            &-1 {
+                background-image: linear-gradient(to right bottom,
+                $color-secondary-light, $color-secondary-dark);
+            }
+        }
+    }
+
+      
+    // when we hover over the card, it shd turn 180deg wch is half of circle
+    // it rotates in the y-direction
+
+    ///when we hover over the card, we want the side to transform
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    // the backside when hovered moves back to zero
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    // styling the picture on front side
+    &__picture {
+        // styling all the images on all cards
+        background-size: cover;
+        // height of image
+        height: 18rem;
+        // to blend the bakground color and background image
+        background-blend-mode: screen;
+        // we then use the clip path property to cut the image
+        // here we dont use vh bse its not the entire background screen size
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        // to make it work on all browsers
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        &--1 {
+            // we move one level out of sass file bse we are making reference to style.css file and not card.scss
+            background-image:  linear-gradient(to right bottom,
+            $color-secondary-light, $color-secondary-dark)
+            ,url(../images/desktop.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        // aliging the text to the right
+        text-align: right;
+        color: $color-white;
+        // placing the  header text on top of image
+        position: absolute;
+        top: 11rem;
+        right: 2rem;
+        // placing width around the text
+        width: 70%;
+    }
+   
+    // decoration for text
+    &__heading-span {
+        // placing padding around the entire element
+        padding: 1rem 1rem;
+        // we use the box decoration break property to treat the text as two different text elements
+        // to work in google chrome
+        -webkit-box-decoration-break:clone;
+        box-decoration-break: clone;
+        // for header-1
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-secondary-light, .85),
+            rgba( $color-secondary-dark, .85));
+        } 
+    }
+           // styling the card details
+           &__detail {
+            //    put space in the beginning of list
+            padding: 2rem;
+            
+            ul {
+                // remove dots when we use unordered list
+                list-style: none;
+                // width of 80% not to occupy enitre space
+                width: 80%;
+                // centering block element inside card
+                margin: 0 auto;
+                li {
+                    // center the text
+                    text-align: center;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+
+                    // to have boder margin on all exept last one
+                    &:not(:last-child) {
+                        border-bottom: .1rem solid $color-grey-light-2;
+                    }
+                }
+            }
+        }
+}

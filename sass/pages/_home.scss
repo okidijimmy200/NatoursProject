@@ -2,5 +2,37 @@
     background-color: $color-grey-light-1;
     padding:25rem 0;
     // to move the section above to cover the triangular space
-    margin-top: -20vh;
+    margin-top: -30vh;
+}
+
+.section-features {
+    // its modern to have websites with wide space
+    padding: 20rem 0;
+    // copy background image from header
+    background-image:linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.801),
+        rgba($color-primary-dark, 0.808)), 
+        url(../images/features.jpg);  
+    background-size: cover;
+    // to place the section above
+    margin-top: -10rem;
+
+    // skewing the entire section
+    // skewing is more like a rotation, +ve direction moves skew clockwise and -ve moves anticlockwise
+    transform: skewY(-8deg);
+    
+    // we shall use the direct child selector '>'
+    & > * {
+        transform: skewY(8deg);
+    }
+
+    
+}
+// styling the section-tours
+.section-tours {
+    background-color: $color-grey-light-1;
+    padding:25rem 0 50rem 0;
+    // moving section up to cover up triangular space
+    margin-top: -10rem;
 }

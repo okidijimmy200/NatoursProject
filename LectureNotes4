@@ -163,3 +163,84 @@ Building the Features Section
 so here we have the four features of the company
 
 *************we use icons from linea.io icons***********
+
+-download all sets
+-move to basics, then iconfonts
+-its better to use icons instead of .PNG bse its easier to scale them
+-we get the style.css file and the fonts folder
+-we include it in out html before our custom css
+
+**icon-font.css operation
+-it includes fonts in the fonts folder
+-we will use all the different font formats like svg, eot bse different browsers understand different types
+-open the html with icon and copy the icon you want
+-all these icons start with a basic like icon-pencil
+
+-writing the markup, we need a row with 4 columns with a feature element
+-feature-box can be a component bse its reused through out the page
+
+-add section about features
+-performing the skew design
+-to place the boxex straight, we skew the text opposite from the section skew
+-we use > to select direct child not all the children bt the immediate children wch is the row
+
+Lecture 9
+Buiding tours section part 1
+-how to build an amazing, rotating created
+-how to use perspective in css
+-how to use backface-visibility property
+-using background blend modes
+-how and when to use box-decoration-break
+
+--start Implementing card component
+-we use transition:rotateY(180deg)
+-when we rotate the card, it turns and moves text to right corner
+-we use perspective to remove the rough edges when turning to make it appear as though its coming to you.
+
+-how do we make sure we see one side of card and when we hover, we see the other side text
+
+-the back side is already 180deg before we turn it, so when we hover, it moves 180deg
+-so its ony the front side that rotates 180deg, the bakside doesnot
+
+-to make the flip complete, they need to be ontop of the other
+-we use absolute positioning
+-when we perform absolute positioning, the card fits the red and green color into the width
+-we solve this by giving the side a width of 100%
+-we use the backface visibility to hide the back part of an element
+
+-when we implement the backface-visibility, the card loses its height bse all the elements are in position absolute
+so they are taken out of their natural flow
+-with absolute, we cant use clear fix to solve the problem, so
+the height of the card shd be 50
+
+-we can also use the transition timing function like ease-in, ease-out
+
+Lecture 10
+Building the tours section part 2
+-we are going to style the card
+-on the card, we have a bk-image, text and color
+-we use background image in css and not img image in html bse we are going to deal with some background blend modes
+
+-if we dont give the image a height, it will not appear
+
+**Background Blend modes
+-This describes how elements, background images should blend ie if we have muiltiple images and we want them to blend
+-so we blend the image with a linear gradient
+
+-we have muiltiple background blend modes like dodge, color-burn wch are mainly used in photoshop
+-when we perfrom the blend effect, the corners are nolonger rounded bse the image is overlapping the parent element.
+-to round the columns
+-on the card property after border-radius, we can set the property to overflow:hidden
+
+-we need to place the header text ontop of image, we use absolute positioning
+
+*how to apply css on the header text
+-we sue box-decoration breaks
+-we create a new element inside of h4
+
+-the clone applies all the declarations in the selector wch in this case in padding to all the boxes
+
+-we want to have aline underneath the text bt we dont want it to go all across the card
+-so we use width
+
+-to center a block element inside ablock element, we use margin 0 auto
