@@ -244,3 +244,15 @@ Building the tours section part 2
 -so we use width
 
 -to center a block element inside ablock element, we use margin 0 auto
+
+NB::we can only have one relative positon for an element then the rest are absolute positioning in relation to the relative
+positioning
+
+
+Lecture 11
+Building the tours section part 3
+-to solve the button text breaking, we give the box a width
+
+-placing the button
+-we add a helper class for margin-top
+-we make a green button component

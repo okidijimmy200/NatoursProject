@@ -38,6 +38,14 @@
                 background-image: linear-gradient(to right bottom,
                 $color-secondary-light, $color-secondary-dark);
             }
+            &-2 {
+                background-image: linear-gradient(to right bottom,
+                $color-primary-light, $color-primary-dark);
+            }
+            &-3 {
+                background-image: linear-gradient(to right bottom,
+                $color-tetiary-light, $color-tetiary-dark);
+            }
         }
     }
 
@@ -58,6 +66,8 @@
     &__picture {
         // styling all the images on all cards
         background-size: cover;
+        border-top-right-radius: .3rem;
+        border-top-left-radius: .3rem;
         // height of image
         height: 18rem;
         // to blend the bakground color and background image
@@ -71,7 +81,21 @@
             // we move one level out of sass file bse we are making reference to style.css file and not card.scss
             background-image:  linear-gradient(to right bottom,
             $color-secondary-light, $color-secondary-dark)
-            ,url(../images/desktop.jpg);
+            ,url(../images/pic1.jpg);
+        }
+        // picture 2
+        &--2 {
+            // we move one level out of sass file bse we are making reference to style.css file and not card.scss
+            background-image:  linear-gradient(to right bottom,
+            $color-primary-light, $color-primary-dark)
+            ,url(../images/pic2.jpg);   
+        }
+        // picture 3
+        &--3 {
+            // we move one level out of sass file bse we are making reference to style.css file and not card.scss
+            background-image:  linear-gradient(to right bottom,
+            $color-tetiary-light, $color-tetiary-dark)
+            ,url(../images/pic3.jpg);   
         }
     }
 
@@ -104,6 +128,18 @@
             rgba($color-secondary-light, .85),
             rgba( $color-secondary-dark, .85));
         } 
+        // span 2
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, .85),
+            rgba($color-primary-dark, .85));
+        }
+        // span 3
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-tetiary-light, .85),
+            rgba($color-tetiary-dark, .85));
+        }
     }
            // styling the card details
            &__detail {
@@ -129,5 +165,35 @@
                     }
                 }
             }
+        }
+        // styling the picture on back side
+        &__cta {
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            // width to prevent the text on button from breaking
+            width: 90%;
+            // placing the button in the middle
+            text-align: center;
+        }
+
+        // price box styling
+        &__price-box {
+            text-align: center;
+            color: $color-white;
+            margin-bottom: 4rem;
+        }
+
+        // price only
+        &__price-only {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        // price value
+        &__price-value {
+            font-size: 2rem;
+            font-weight: 100;
+            // when we have huge text, its better when its thin
         }
 }

@@ -13,7 +13,7 @@
 &:visited {
     text-transform: uppercase;
     font-size: $default-font-size;
-    text-decoration: none;   
+    text-decoration: none;     
     /*padding around button  */
     padding: 1.5rem 4rem;
     /* displaying btn as an inlink block to execute padding */
@@ -46,6 +46,11 @@
     background-color: #fff;
     color: $color-gray-dark;
 }
+/* styling color to green */
+&--green {
+    background-color: $color-primary;
+    color: $color-white;
+}
 
 /* pseudo-elements allow us to style some parts of elements */
 /* e.g after pseudo adds a vitual element to the element which enables us to style it*/
@@ -69,6 +74,9 @@
 /* ::after pseduo-element with button white */
 &--white::after {
     background-color:#fff;
+}
+&--green::after {
+    background-color:$color-primary;
 }
 
 /* after pseudo element when button is hovered */
